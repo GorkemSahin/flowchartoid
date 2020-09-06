@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="1"
+    tools:context="com.sahin.gorkem.flowchartoid.DrawingActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:background="@drawable/background_border"
+                android:id="@+id/shapesLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:tag="@string/start"
+                    android:id="@+id/start_shape"
+                    android:layout_marginLeft="16dp"
+                    style="@style/ShapeTheme"
+                    android:src="@drawable/start_shape"/>
+
+                <ImageView
+                    android:tag="@string/input"
+                    android:id="@+id/input_shape"
+                    style="@style/ShapeTheme"
+                    android:src="@drawable/input_shape"/>
+
+                <ImageView
+                    android:tag="@string/condition"
+                    android:id="@+id/condition_shape"
+                    style="@style/ShapeTheme"
+                    android:src="@drawable/condition_shape"/>
+
+                <ImageView
+                    android:tag="@string/process"
+                    android:id="@+id/process_shape"
+                    style="@style/ShapeTheme"
+                    android:src="@drawable/process_shape"/>
+
+                <ImageView
+                    android:src="@drawable/while_shape"
+                    android:tag="WHILE"
+                    style="@style/ShapeTheme"
+                    android:id="@+id/while_shape"/>
+
+                <ImageView
+                    android:tag="@string/output"
+                    android:id="@+id/output_shape"
+                    style="@style/ShapeTheme"
+                    android:src="@drawable/output_shape"/>
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <com.sahin.gorkem.flowchartoid.DrawingUtils.DrawingSurface
+            android:background="@android:color/white"
+            android:id="@+id/drawingSurface"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+
+        <LinearLayout
+            android:padding="16dp"
+            android:background="@drawable/background_border"
+            android:id="@+id/toolsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:onClick="setDeleteButton"
+                android:id="@+id/deleteButton"
+                style="@style/ShapeTheme"
+                android:src="@drawable/ic_delete"/>
+
+            <ImageView
+                android:onClick="setImageButton"
+                android:id="@+id/pngButton"
+                style="@style/ShapeTheme"
+                android:src="@drawable/ic_image" />
+
+            <ImageView
+                android:onClick="setSaveButton"
+                android:id="@+id/saveButton"
+                style="@style/ShapeTheme"
+                android:src="@drawable/ic_save"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</android.support.constraint.ConstraintLayout>

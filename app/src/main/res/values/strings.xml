@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Flowchartoid</string>
+    <string name="flowcharts">Flowcharts</string>
+    <string name="preferences">Preferences</string>
+    <string name="help">Help</string>
+    <string name="about">About</string>
+
+    <string name="flowcharts_explanation">Your flowcharts will appear here.</string>
+
+    <string name="dark_theme">Dark Theme</string>
+
+    <string name="help_explanation">Press and hold on a shape to drag and drop it to the desired location.</string>
+
+    <string name="about_explanation">This app is still under development so expect missing features and bugs.</string>
+    <string name="credits">Coded by Gorkem Sahin as a project assignment under the supervision of As. Prof. Z. C. Taysi. </string>
+
+    <string name="drawer_open_title">Menu</string>
+    <string name="drawer_open_description">Drawer opened.</string>
+    <string name="drawer_close_description">Drawer closed.</string>
+
+    <string name="start">START</string>
+    <string name="input">INPUT</string>
+    <string name="condition">CONDITION</string>
+    <string name="process">PROCESS</string>
+    <string name="output">OUTPUT</string>
+</resources>
